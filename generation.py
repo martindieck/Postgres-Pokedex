@@ -1,5 +1,7 @@
-import requests
-from fetch_data import fetch_data
+from utils.connect import connect
+from utils.close import close
+from utils.create_table import create_table
+from utils.fetch_data import fetch_data
 
 base_url = 'https://pokeapi.co/api/v2/generation/'  # Replace with the actual API URL
 generation_data = fetch_data(base_url)
@@ -13,13 +15,13 @@ if generation_data is not None:
         data = fetch_data(generation_url)
 
         if data is not None:
-            temp = [
+            temp = (
                 data["id"],
                 data["name"],
                 data["main_region"]["url"].rsplit("/", 2)[-2]
-            ]
+            )
             gen_list.append(temp)
 
     print(gen_list)
 else:
-    print("Could not fetch generation data.")
+    print("Could not fetch data.")
