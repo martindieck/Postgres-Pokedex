@@ -3,13 +3,14 @@ from utils.navigate_data import navigate_data
 
 def extract_data(category_data, columns, url):
     if category_data is not None:
-        count = category_data["count"]
+        count_total = category_data["count"]
+        offset = '?offset=-21'
+        fetch_true_count = f'{url}{offset}/'
+        true_count = count_total - (navigate_data(fetch_data(fetch_true_count),[['results', 19, 'url']])[0] - 10000) - 1
+
         row_list = []
-
-        if url.rsplit("/", 2)[-2] == 'pokemon':
-            count = 1017
-
-        for i in range(count):
+        
+        for i in range(true_count):
             fetch_url = f'{url}{i+1}/'
             row_data = fetch_data(fetch_url)
 

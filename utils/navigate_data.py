@@ -23,8 +23,11 @@ def navigate_data(data, keys):
             # By the key being an integer, it is implied we are dealing with a list.
             elif isinstance(key, int):
                 # Handle the case where the list index is out of bounds.
-                if key < len(current_value):
-                    current_value = current_value[key]
+                if key < len(current_value) and len(current_value) != 0:
+                    try:
+                        current_value = current_value[key]
+                    except:
+                        current_value = current_value[0]
                 else:
                     current_value = None
                     break
