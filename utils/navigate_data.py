@@ -9,6 +9,8 @@ def navigate_data(data, keys):
         # This variable will be used to keep track of the current position within the nested data structure.
         current_value = data
         for key in key_chain:
+            if current_value is None:
+                break
             # By the key being a string, it is implied we are dealing with a dictionary.
             if isinstance(key, str):
                 # Handle the case where a key is missing in the path.

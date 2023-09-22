@@ -1,4 +1,13 @@
 {
+       "accuracy": 1100,
+       "contest_combos": null,
+       "contest_effect": null,
+       "contest_type": null,
+       "damage_class": {
+              "name": "physical",
+              "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
+       },
+       "effect_chance": null,
        "effect_changes": [],
        "effect_entries": [],
        "flavor_text_entries": [],
@@ -6,68 +15,49 @@
               "name": "generation-ix",
               "url": "https://pokeapi.co/api/v2/generation/9/"
        },
-       "id": 268,
-       "is_main_series": true,
-       "name": "lingering-aroma",
+       "id": 904,
+       "learned_by_pokemon": [
+              {
+                     "name": "ogerpon",
+                     "url": "https://pokeapi.co/api/v2/pokemon/1017/"
+              },
+              {
+                     "name": "ogerpon-wellspring-mask",
+                     "url": "https://pokeapi.co/api/v2/pokemon/10273/"
+              },
+              {
+                     "name": "ogerpon-hearthflame-mask",
+                     "url": "https://pokeapi.co/api/v2/pokemon/10274/"
+              },
+              {
+                     "name": "ogerpon-cornerstone-mask",
+                     "url": "https://pokeapi.co/api/v2/pokemon/10275/"
+              }
+       ],
+       "machines": [],
+       "meta": null,
+       "name": "ivy-cudgel",
        "names": [
-              {
-                     "language": {
-                            "name": "ja-Hrkt",
-                            "url": "https://pokeapi.co/api/v2/language/1/"
-                     },
-                     "name": "\u3068\u308c\u306a\u3044\u306b\u304a\u3044"
-              },
-              {
-                     "language": {
-                            "name": "fr",
-                            "url": "https://pokeapi.co/api/v2/language/5/"
-                     },
-                     "name": "Odeur Tenace"
-              },
-              {
-                     "language": {
-                            "name": "de",
-                            "url": "https://pokeapi.co/api/v2/language/6/"
-                     },
-                     "name": "Duftschwade"
-              },
-              {
-                     "language": {
-                            "name": "es",
-                            "url": "https://pokeapi.co/api/v2/language/7/"
-                     },
-                     "name": "Olor Persistente"
-              },
-              {
-                     "language": {
-                            "name": "it",
-                            "url": "https://pokeapi.co/api/v2/language/8/"
-                     },
-                     "name": "Odore Tenace"
-              },
               {
                      "language": {
                             "name": "en",
                             "url": "https://pokeapi.co/api/v2/language/9/"
                      },
-                     "name": "Lingering Aroma"
-              },
-              {
-                     "language": {
-                            "name": "ja",
-                            "url": "https://pokeapi.co/api/v2/language/11/"
-                     },
-                     "name": "\u3068\u308c\u306a\u3044\u306b\u304a\u3044"
+                     "name": "Ivy Cudgel"
               }
        ],
-       "pokemon": [
-              {
-                     "is_hidden": false,
-                     "pokemon": {
-                            "name": "oinkologne",
-                            "url": "https://pokeapi.co/api/v2/pokemon/916/"
-                     },
-                     "slot": 1
-              }
-       ]
+       "past_values": [],
+       "power": 100,
+       "pp": 10,
+       "priority": 0,
+       "stat_changes": [],
+       "super_contest_effect": null,
+       "target": {
+              "name": "selected-pokemon",
+              "url": "https://pokeapi.co/api/v2/move-target/10/"
+       },
+       "type": {
+              "name": "grass",
+              "url": "https://pokeapi.co/api/v2/type/12/"
+       }
 }
