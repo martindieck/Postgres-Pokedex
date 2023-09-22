@@ -20,6 +20,8 @@ class Table:
         self.name = table_name
         self.fields = fields
         self.api_fields = api_fields
+        print('Creating table object.')
+
         
     def create_table(self):
         create_table(self.name, self.fields, self.cur)
