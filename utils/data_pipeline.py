@@ -1,3 +1,4 @@
+import psycopg2
 from utils.close import close
 from utils.table_generator import Table
 

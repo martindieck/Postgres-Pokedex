@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'https://pokeapi.co/api/v2/region/'  # Replace with the actual API URL
+url = 'https://pokeapi.co/api/v2/pokemon/1'
 response = requests.get(url)
 
 if response.status_code == 200:
