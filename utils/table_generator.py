@@ -11,15 +11,15 @@ class Table:
     url = category url\n
     table_name = desired table name\n
     fields = desired table fields in format: id int PRIMARY KEY, name text\n
-    api_fields = list of desired fields to extract from API (if url inside dictionary, use list as so: ['main_region','url'])\n
+    keys = list of desired fields to extract from API (if url inside dictionary, use list as so: ['main_region','url'])\n
     '''
-    def __init__(self, conn, cur, url, table_name, fields, api_fields):
+    def __init__(self, conn, cur, url, table_name, fields, keys):
         self.conn = conn
         self.cur = cur
         self.url = url
         self.name = table_name
         self.fields = fields
-        self.api_fields = api_fields
+        self.keys = keys
         print('Creating table object.')
 
         
@@ -30,7 +30,7 @@ class Table:
         return fetch_data(self.url)
     
     def extract_data(self, category_data):
-        return extract_data(category_data, self.api_fields, self.url)
+        return extract_data(category_data, self.keys, self.url)
     
     def insert_data(self, extracted_data):
         insert_data(self.cur, self.name, extracted_data)
