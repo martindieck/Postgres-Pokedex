@@ -20,7 +20,13 @@ def extract_data(category_data, keys, url):
         # Invalid ids are those that start counting from 10,000 onward (ex. 10001, 10054, etc.). They represent incomplete/missing resource entries in the API.
         # To know the exact count of valid ids, the exact id of the last invalid entry is retrieved (ex. 10053) and a subtraction is made between that and the total count.
         # For example, if the total count is 362 and the last invalid entry is 10052, the true count of valid entries would be 309.
-        true_count = count_total - (navigate_data(fetch_data(last_page_url),[['results', -1, 'url']])[0] - 10000) - 1
+        
+        last_page_data = fetch_data(last_page_url)
+        navigated_last_page_data = navigate_data(last_page_data,[['results', -1, 'url']])
+        if navigated_last_page_data[0] >= 10000:
+            true_count = count_total - (navigated_last_page_data[0] - 10000) - 1
+        else:
+            true_count = count_total
 
         print('Commencing data extraction. Valid records found: ' + str(true_count)) # QoL statement that announces the total valid records found.
 

@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'https://pokeapi.co/api/v2/move/904'
+url = 'https://pokeapi.co/api/v2/pokemon/6'
 response = requests.get(url)
 
 if response.status_code == 200:
