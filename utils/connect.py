@@ -1,12 +1,17 @@
 import psycopg2
+import configparser
 
 def connect():
-    host = 'pokedex-db.co6jyeobbdsz.us-east-2.rds.amazonaws.com'
-    port = 5432
-    database = 'pokedex_db'
-    user = 'postgres'
-    password = 'pokedex123'
+    config = configparser.ConfigParser()
+    config.read('config.ini')
 
+    # Database connection parameters
+    host = config.get('database', 'host')
+    port = config.get('database', 'port')
+    database = config.get('database', 'database')
+    user = config.get('database', 'user')
+    password = config.get('database', 'password')
+    
     conn = psycopg2.connect(
         host=host,
         port=port,
