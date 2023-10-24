@@ -33,7 +33,7 @@ def extract_data(category_data, keys, url):
         row_list = [] # Initializing empty list for final results.
 
         # Loop that initializes once per valid entry. Using the 'tqdm' package to create a load bar for QoL.
-        for i in tqdm (range (true_count), desc="Extracting..."):
+        for i in tqdm (range (true_count), desc="Extracting"):
             
             # Creates unique url that gets passed into the 'fetch_data' function for calling the API.
             fetch_url = f'{url}{i+1}/'
